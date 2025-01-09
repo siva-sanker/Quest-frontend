@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0;}          /*for input type number*/
+
 nav {
     display: flex;
     /* justify-content: right; */
@@ -33,7 +35,7 @@ nav {
 
 .nav-links a {
     color: white;
-    font-family: "Roboto Condensed", serif;;
+    font-family: "Roboto Condensed", serif;
     text-decoration: none;
     font-size: 0.8rem;
 }
@@ -48,9 +50,9 @@ nav {
     margin-left: auto;
     border: none;
     border-radius: 10px;
-    background-color: #4CAF50;
+    background-color: transparent;
     color: white;
-    padding: 10px 20px;
+    padding: 3px 12px;
     cursor: pointer;
 
 }
@@ -73,7 +75,7 @@ nav {
 .slider{
     display: flex; 
     width: 100%; /* Adjust based on the number of images */
-    animation: slide 15s infinite;
+    animation: move 10s infinite;
 }
 
 .slider img{
@@ -83,12 +85,10 @@ nav {
     object-fit: cover;
 }
 
-@keyframes slide { 
+@keyframes move { 
     0% { transform: translateX(0); } 
     20% { transform: translateX(-100%); } /* Move to the second image */ 
     40% { transform: translateX(-200%); } /* Move to the third image */ 
-    60% { transform: translateX(-300%); } /* Move to the fourth image */ 
-    80% { transform: translateX(-400%); } /* Move to the fifth image */ 
     100% { transform: translateX(0); }
 }
 
@@ -105,11 +105,12 @@ h1{
     flex-direction: column;
     width: 190px;
     height: 190px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.338);
     border-radius: 145px;
     text-align: center;
     justify-content: center;
-    margin: 15px 0 0px 100px;
+    margin: 15px 0 14px 16%;
 }
 
 .choice p{
@@ -130,7 +131,8 @@ h1{
 .choice:hover{
     /* background-color: rgba(229, 34, 34, 0.445); */
     transition: 0.2s;
-    color: gold;
+    transform: scale(1.2);
+    color: yellowgreen;
     cursor: pointer;
 }
 
@@ -172,4 +174,127 @@ h1{
     height: 240px;
     transform: scale(1.0);
 
+}
+
+.explore{
+    display: inline-flex;
+    flex-direction: column;
+    margin:15px auto 0px 70px;
+    text-align: center;
+    width: 650px;
+    height: 500px;
+    object-fit: cover;
+    /* border: 2px solid #333; */
+}
+
+.explore img{
+    width: 650px;
+    height: 500px;
+    border-radius: 48px;
+    cursor: pointer;
+    transform: scale(1.0);
+}
+
+.explore img:hover{
+    transform: scale(0.8);
+    transition: 0.3s ease-out;
+}
+
+.form{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: red;
+    margin-top: 15px;
+    text-align: center;
+}
+
+input[type="text"],input[type="number"]{
+    width: 230px;
+    height: auto;
+    font-family: 'Bebas Neue', serif;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    padding: 3px;
+    margin: 20px 0px 8px 6%;
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+::placeholder{
+    color: white;
+}
+
+select{
+    display: inline-block;
+    position: relative;
+    width: 230px;
+    height:auto;
+    font-family: 'Bebas Neue', serif;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    /* padding: 12px; */
+    margin: 26px 0px 8px 5%;
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+
+select option{
+    outline: none;
+    padding: 80px;
+    color: black;
+}
+
+.submit{
+    color: red;
+    font-family: 'Bebas Neue',serif;
+    font-size: 2em;
+    width: 130px;
+    height: 45px;
+    display: block;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-top: 20px;
+
+}
+
+.foot{
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    font-family: 'Bebas Neue',serif;
+    font-weight: 100;
+    font-size: 1.5em;
+    color: gray;
+}
+
+.foot h2:hover{
+    cursor: pointer;
+    color: black;
+    transition: 0.2s ease;
+}
+
+.foot h2{
+    margin-top: 10px;
+}
+
+.media{
+    width: 300px;
+    /* padding: 3px; */
+    /* border: 2px solid green; */
+    margin-left: 80%;
+    text-align: center;
+}
+
+.media img{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
 }
