@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Spice&family=Iceland&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calcbody">
+        
+        <div class="description">
+            <p>Calculator</p>
+            <hr>
+        </div>
+
+        <input type="text" class="display" placeholder="0">
+        <hr>
+
+        <div class="buttons">
+            <button type="button" value="+" class="operators">+
+            <button type="button" value="-" class="operators"> -
+            <button type="button" value="*" class="operators"> x
+            <button type="button" value="/" class="operators">÷
+            <button type="button" value="1">1
+            <button type="button" value="2">2
+            <button type="button" value="3">3
+            <button type="button" value="4">4
+            <button type="button" value="5">5
+            <button type="button" value="6">6
+            <button type="button" value="7">7
+            <button type="button" value="8">8
+            <button type="button" value="9">9
+            <button type="button" value="0">0
+            <button type="button" value=".">.
+            <button type="button" value=""><-
+            <button type="button" value="C" class="c">C
+            <button type="button" value="=" class="equals">=
+        </div>
+
+    </div>
+
+    <script>
+        const calculatorScreen = document.querySelector('.display');
+        const keys = document.querySelector('.buttons');
+
+    keys.addEventListener('click', (event) => {
+    const { target } = event;
+    const { value } = target;
+    if (!target.matches('button')) {
+    return;
+  }
+
+  switch (value) {
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+      calculatorScreen.value += value;
+      break;
+    case '=':
+      calculatorScreen.value = eval(calculatorScreen.value);
+      break;
+    case 'C':
+      calculatorScreen.value = '';
+      break;
+    default:
+      calculatorScreen.value += value;
+      break;
+  }
+});
+
+    </script>
+</body>
+</html>

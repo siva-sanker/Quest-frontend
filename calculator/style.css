@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background-image: linear-gradient(to top, white,wheat); */
+    /* background-repeat: no-repeat; */
+}
+
+.calcbody{
+    width: 480px;
+    height:540px;
+    /* border: 0.2px solid black; */
+    box-shadow: 4px 4px 8px gray, -4px -4px 8px lightgray;
+    border-radius: 16px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 33%;
+    margin-top: 4rem;
+}
+
+.description p{
+    /* border: 2px solid red; */
+    
+    font-family: "Bungee Spice", serif;
+    color: red;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="text"]{
+    text-align: right;
+    width: 470px;
+    height: 40px;
+    /* margin-top: 10px; */
+    border: none;
+    outline: none;
+    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);; */
+    font-size: 2em;
+    font-family: "Iceland", serif;
+}
+
+.buttons{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 440px;
+    /* border: 2px solid red; */
+    display: grid;
+    margin: 18px 0px 0px 4%;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 26px;
+    
+}
+
+button[type="button"]{
+    padding: 16px;
+    border-radius: 5px;
+    border: 0.3px solid gray;
+    background-color: #e0e0e0;;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-family: "Iceland", serif;
+}
+
+button.c{
+    background-color: red;
+    color: white;
+    grid-column: span 3;
+}
+
+button.operators{
+    background-color: #ff9500;
+}
+
+button.equals{
+    background-color: green;
+    color: white;
+}
+
+button:not(.operators):not(.equals):not(.c):hover{
+    background-color: rgba(96, 93, 93, 0.573);
+    transition: 0.2s;
+}
