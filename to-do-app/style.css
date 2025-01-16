@@ -1,0 +1,133 @@
+body{
+    /* text-align: center; */
+    padding: 0;
+    margin: 0;
+    background-color: #92b7fe;
+    /* border: 2px solid black; */
+}
+
+body.light-mode { 
+    background-color: #92b7fe; 
+    color: #000000; 
+} 
+
+body.dark-mode { 
+    background-color: #000000;  
+}
+
+body.light-mode .base{
+    box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+    transition: 0.3s ease;
+}
+
+body.dark-mode .base{
+    box-shadow: 0 0 40px rgb(255, 253, 253,0.6);
+    transition: 0.3s ease;
+}
+
+h1{
+    font-family: "Luckiest Guy", serif;
+    font-size: 4em;
+    color: gold;
+}
+
+/* .header{
+    /* border: 1px solid ; */
+/* } */
+
+.base{
+    background-color: white;
+    padding: 20px;
+    /* border: 2px solid red; */
+    border-radius: 16px;
+    width: 45%;
+    height: auto;
+    margin-left: 26%;
+}
+
+#mode-toggle{ 
+    margin-left: 49%;
+    padding: 7px; 
+    cursor: pointer; 
+    background-color: #6c63fe; 
+    color: white; 
+    border: none; 
+    border-radius: 90px;
+    font-size: 15px; 
+}
+
+#todo-input{
+    width: 300px;
+    margin-left: 1%;
+    padding: 3px;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    font-size: 14px;
+    font-family: "Nothing You Could Do", serif;
+}
+
+#add-btn{
+    font-family: "Montserrat", serif;
+    padding: 8px;
+    margin-left: 1%;
+    margin-top: 13px;
+    background-color: #6c63fe;
+    border: none;
+    color: white;
+    outline: none;
+    border-radius: 6px;
+}
+
+#delete-btn{
+    font-family: "Montserrat", serif;
+    padding: 8px;
+    margin-left: 1%;
+    margin-top: 13px;
+    background-color: #6c63fe;
+    border: none;
+    color: white;
+    outline: none;
+    border-radius: 6px;
+}
+
+
+ul { 
+    list-style-type: none; 
+    padding: 0; 
+} 
+li { 
+    background-color: transparent; 
+    margin: 5px 0; 
+    padding: 10px; 
+    border-radius: 5px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+} 
+
+li .task { 
+    flex-grow: 1; 
+    margin-left: 10px; 
+    text-align: left; 
+} 
+
+li.completed .task { 
+    text-decoration: line-through; 
+    transition: 2.6s ease-out;
+    color: #999; 
+} 
+
+li button { 
+    background-color: #e74c3c; 
+    border: none; 
+    color: white; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+} 
+li button:hover { 
+    background-color: #c0392b;
+    transition: 0.3s ease; 
+}
